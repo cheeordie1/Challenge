@@ -1,0 +1,47 @@
+By now, you may have seen a few important objects that are useful to model or
+simulate various things using programming. For instance, a Stack can be used
+to represent a stack of cards. A Queue can be used to simulate a line of
+people waiting to buy tickets at a ticket booth. Now, we will show you an
+object that hopefully few of you have seen before, and fewer have implemented.
+It's called a Binary Search Tree.
+
+A Binary Search tree is a way to represent a list of things that you have in
+memory. One way to think of it is like a special array, an array with
+constraints. Consider an array for a second. An array is a list of items that
+we can access at any point by using their index. A Binary Search Tree is a
+list of items, but in order to access something, we need to find it. We cannot
+use index notation in the same linear fashion that we use for arrays. In a
+binary search tree, our list is ordered as nodes. Every item is a node, and it
+lets you access an item to the left of it, and an item to the right of it.
+
+Open the picture of the binary search tree in this directory for reference.
+
+Each element in the binary search tree is a node that has a number to order
+it. Every node has a left child and a right child. Every time we move from
+one node to the right child, the child is greater than its parent. Every time
+we move from the parent to the left child, the child is smaller than the
+parent. Go ahead and try this for any node in the picture. You will see that
+this holds. That means that the object we have, this tree of nodes and
+children, is a Binary Search Tree.
+
+So what does this mean?
+
+Well, some Binary Search Trees Are very useful for finding the max or min
+element in the tree. Just keep going right from the root parent (the very
+top element in the tree) and when you can't go any further, you're at the max.
+You can try this for The pictures as well. According to our constraints, it
+makes sense why this happens.
+
+Although finding the max or min is not really significant in itself,
+sorting an array is very important, and the easiest way to sort an array,
+as some of us saw in the TA session on Monday led by our glorious TA, Nick,
+is to continuously find the max element in the array and put it at the next
+position.
+
+So if we wanted to sort all the elements in our BST, what do you think we
+would do? 
+
+Hint: The only functions that every BST is guaranteed to have are
+insert - to put a new node/number in the tree, remove - to take a node/number
+out of the tree, find-max and find-min - to search the tree for the largest
+and smallest elements respectively. 

@@ -1,0 +1,54 @@
+Binary Search Trees can be useful tools if used correctly to keep a sorted
+group of elements. For this challenge, implement a Binary Search Tree. A
+Binary Search tree must operate under the following constraints:
+
+1. For every node, its left child is smaller, its right child is greater.
+2. Every node with no children under it is a leaf node.
+3. If there is no right child, the right should be null
+4. If there is no left child, the left should be null
+5. Therefore, every node with no left or right children is a leaf.
+
+As long as you conserve numbers 1, 3, and 4, the rest will follow.
+
+The Binary Search tree that you make will have the following functions:
+
+1. insert(node) - Search through the Binary Search Tree to place the parameter
+   node in its proper location. Go right if the node is larger than the
+   current node, left if it is less than or equal. If the node that you are
+   currently checking has a null child slot and node belongs there, then place
+   the node in that slot by saying something like current.left = node or 
+   current.right = node. Ask a TA for clarifications.
+
+2. remove(value) - Search through the BST to find a node with the same value
+   as the parameter value. Delete as follows:
+
+a. If the node to be deleted is a leaf and has 0 children, simply remove the
+   node by setting the child of its parent to null instead of to the node.
+
+b. If the node to be deleted has 1 child, set the child of the parent of the
+   node to be deleted to the child of the node to be deleted. (Make the parent)
+   skip the child.
+
+*c. If the node to be deleted has 2 children. Find the node R with the closest
+    value less than the node to be deleted N. Put that value in N's value. Do
+    not delete N. Instead, recursively call delete on the new value of R. One
+    of the other cases will eventually be reached.
+
+NOTE: part c of deletion is very difficult and requires an understanding of
+      recursion. An acceptable option for this case is to not delete
+      anything and simply console.log("Sorry, case c :(")
+
+3. find_max() - Find the maximum element in the BST. Self explanatory, just
+                keep traversing to right children nodes.
+
+4. empty() - a simple check to see if the BST is empty, that is if its root is
+             null
+
+4. sort() - Finally, sort the BST by calling find_max() to get a value max and
+            remove(max) on the BST until empty() returns true.
+
+That's all, if you have any questions, come to a TA. Good luck, and fare thee
+well. Also, don't expect to finish this challenge problem today, because we
+are hoping this actually challenges you. Also, no googling wikipedia for
+pseudocode because that's just not challenging. If there is anything that you
+need that isn't in this documentation, ask a TA.
